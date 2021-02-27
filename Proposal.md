@@ -9,7 +9,7 @@ The State of Indiana requires the filing of a sales disclosure form (SDF) whenev
 ## 2.	Dataset:
 https://www.stats.indiana.edu/topic/sdf.asp - Specific focus on 2020 data
 ## 3.	Inspiration:
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Tools:
   - Machine Learning 
   – Predicting property value based on user input (property type, acreage, city/zip)
