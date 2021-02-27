@@ -19,15 +19,15 @@ https://github.com/MaxBrowning/butler-project3-groupD
 Source: Stats Indiana
 The original data shows property sales in the state of Indiana during 2020.
 Columns: 
-•	Parcel ID
-•	Acreage
-•	Street Address
-•	City
-•	State
-•	Zip
-•	Conveyance Date
-•	Sales Price
-•	Assessor Information
-•	Seller & Purchaser Information
-•	Title Company
-•	Primary Residence
+  -	Parcel ID
+  -	Acreage
+  -	Street Address
+  -	City
+  -	State
+  -	Zip
+  -	Conveyance Date
+  -	Sales Price
+  -	Assessor Information
+  -	Seller & Purchaser Information
+  -	Title Company
+  -	Primary Residence
