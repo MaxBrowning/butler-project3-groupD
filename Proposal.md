@@ -10,10 +10,11 @@ The State of Indiana requires the filing of a sales disclosure form (SDF) whenev
 https://www.stats.indiana.edu/topic/sdf.asp - Specific focus on 2020 data
 ## 3.	Inspiration:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  -Machine Learning 
+Tools:
+  - Machine Learning 
   – Predicting property value based on user input (property type, acreage, city/zip)
-  -Tableau – dynamic graphs and maps
-  -SQL / Postgres & Heroku deployment
+  - Tableau – dynamic graphs and maps
+  - SQL / Postgres & Heroku deployment
 
 ## 4.	Link to GitHub Repo
 https://github.com/MaxBrowning/butler-project3-groupD
