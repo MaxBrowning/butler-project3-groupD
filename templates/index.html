@@ -19,30 +19,30 @@
 
   <div>
    <!-- Html form which will get all the values from user -->
-   <form action="{{ url_for('predict')}}" method="post" style="background-color:#E6E6FA">
-  <label for="Assessed_Value">Total Assessed Value</label><br>
-  <input type="text" id="Assessed_Value" name="Assessed_Value" placeholder= "50,000" required="required"><br>
+   <form action = "{{ url_for('predict')}}" method = "post" style="background-color:#f6f6f6">
+  <label for = "Assessed_Value">Total Assessed Value</label><br>
+  <input type = "text" id = "Assessed_Value" name = "Assessed_Value" placeholder = "50,000" required = "required"><br>
   <label for="Acreage">Amount of Acreage</label><br>
-  <input type="text" id="Acreage" name="Acreage" placeholder="1" required="required"><br>
+  <input type="text" id = "Acreage" name = "Acreage" placeholder = "1" required = "required"><br>
 
-  <label for="Property_Class">Type of Property</label><br>
-  <select id="Property_Class" name="Property_Class">
-        <option value="0">Agrigultural</option>
-        <option value="1">Commercial</option>
-        <option value="2">Exempt</option>
-        <option value="3">Industrial</option>
-        <option value="4">Locally Assessed</option>
-        <option value="5">Residential</option>
+  <label for = "Property_Class">Type of Property</label><br>
+  <select id = "Property_Class" name = "Property_Class">
+        <option value = "0">Agrigultural</option>
+        <option value = "1">Commercial</option>
+        <option value = "2">Exempt</option>
+        <option value = "3">Industrial</option>
+        <option value = "4">Locally Assessed</option>
+        <option value = "5">Residential</option>
       </select><br>
   <!-- drop down options are provided for the categorical features -->
-  <label for="Vacant">Vacant</label><br>
-  <select id="vacant" name="Vacant">
-        <option value="0">Yes</option>
-        <option value="1">No</option>
+  <label for = "Vacant">Vacant</label><br>
+  <select id = "vacant" name="Vacant">
+        <option value = "0">Yes</option>
+        <option value = "1">No</option>
       </select><br>
- 
+ <br>
   <!-- submit button -->           
-  <input type="submit" value="Calculate Selling Price">
+  <input type = "submit" value="Calculate Selling Price">
   </form>
   </div>
       
