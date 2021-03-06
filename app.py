@@ -18,7 +18,7 @@ def home():
     return render_template('index.html')
 
 #creating object for StandardScaler
-standard_to = StandardScaler()
+scaler = StandardScaler()
 
 
 #define the route for post request method 
@@ -81,17 +81,26 @@ def predict():
             Class_Code_Translated_Industrial = 0 
             Class_Code_Translated_Locally_Assessed = 0  
             Class_Code_Translated_Residential = 1
-# open file pickle.load x and y
-# apply x scaler to xdata
-        prediction = model.predict([[Total_Assessed_Value, Parcel_Acreage, Parcel_Vacancy_Y, Parcel_Vacancy_N, Class_Code_Translated_Agricultural, Class_Code_Translated_Commercial, Class_Code_Translated_Exempt, Class_Code_Translated_Industrial, Class_Code_Translated_Locally_Assessed, Class_Code_Translated_Residential]])
-# apply y scaler.inverse transform
-        output = round(prediction[0],2)
+    # open file pickle.load x and y
+    new_data= [[Total_Assessed_Value, Parcel_Acreage, Parcel_Vacancy_Y, Parcel_Vacancy_N, Class_Code_Translated_Agricultural, Class_Code_Translated_Commercial, Class_Code_Translated_Exempt, Class_Code_Translated_Industrial, Class_Code_Translated_Locally_Assessed, Class_Code_Translated_Residential]]
+    # apply x scaler to xdata
+    Xscaler = pickle.load(open("Xscaler.pkl", "rb"))
+    Yscaler = pickle.load(open("Yscaler.pkl", "rb"))
 
-        print([[Total_Assessed_Value, Parcel_Acreage, Parcel_Vacancy_Y, Parcel_Vacancy_N, Class_Code_Translated_Agricultural, Class_Code_Translated_Commercial, Class_Code_Translated_Exempt, Class_Code_Translated_Industrial, Class_Code_Translated_Locally_Assessed, Class_Code_Translated_Residential]])
+    scaled = Xscaler.transform(new_data)
+
+    # for inverse transformation
+    #inversed = scaler.inverse_transform(scaled)
+    #print(inversed)
+    prediction = Yscaler.inverse_transform(model.predict(scaled))
+    # apply y scaler.inverse transform
+    output = round(prediction[0],2)
+
+   
+    print (output)
 
 
-
-        #condition for invalid values
+    if output:           #condition for invalid values
         return render_template('index.html', prediction_text = "This property is worth {}".format(output))
         
     #html form to be displayed on screen when no values are inserted; without any output or prediction
