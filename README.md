@@ -20,6 +20,8 @@ While the assessed value of a property is a strong indicator of its overall sale
 ##### Feature Matrix Heatmap:
 ![Image of Machine Learning feature matrix heatmap](https://github.com/MaxBrowning/butler-project3-groupD/blob/main/images/Correlation_Heatmap.JPG)
 
+---
+
 ### Languages and Tools:
 * Python
 * HTML
