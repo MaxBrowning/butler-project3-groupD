@@ -72,11 +72,16 @@
 </head>
 
 <body>
+
+  {% include 'navbar.html' %}
+
+  <br>
+
   <h1>Property Value Prediction</h1>
 
   <div>
    <!-- Html form which will get all the values from user -->
-   <form action = "{{ url_for('predict')}}" method = "post" style="background-color:#f6f6f6">
+   <form action = "{{ url_for('predict')}}" method = "post" style="background-color:#f6f6f6; margin-top:10%">
   <label for = "Assessed_Value">Total Assessed Value</label><br>
   <input type = "text" id = "Assessed_Value" name = "Assessed_Value" placeholder = "50,000" required = "required"><br>
   <label for="Acreage">Amount of Acreage</label><br>

@@ -105,6 +105,10 @@ def database_data():
     response.headers.add('Access-Control-Allow-Origin','*')
     return response
 
+@app.route('/explore')
+def explore():
+    return render_template('explore.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
