@@ -27,7 +27,7 @@ scaler = StandardScaler()
 #define the predict function which is going to predict the results from ml model based on the given values through html form
 def predict():
     if request.method == 'POST':
-        Total_Assessed_Value = float(request.form['Assessed_Value'])
+        Total_Assessed_Value = float(request.form['Assessed_Value'].replace(',','').replace('$',''))
         Parcel_Acreage = float(request.form['Acreage'])
         Vacant = request.form['Vacant']
         if (Vacant == 'Yes'):
@@ -101,7 +101,7 @@ def predict():
 
 
     if output:           #condition for invalid values
-        return render_template('index.html', prediction_text = "This property is worth {}".format(output))
+        return render_template('index.html', prediction_text = "This property is worth ${:,.2f}".format(output))
         
     #html form to be displayed on screen when no values are inserted; without any output or prediction
     else:
