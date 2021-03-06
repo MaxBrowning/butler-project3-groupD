@@ -9,3 +9,5 @@ While the assessed value of a property is a strong indicator of its overall sale
 
 ### Dataset:
 [Indiana 2020 Property Sales Disclosure Form Data](https://www.stats.indiana.edu/topic/sdf.asp)
+
+### Representative Images of Deployed Project:
