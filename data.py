@@ -6,7 +6,6 @@ from flask import (
     redirect)
 import pandas as pd
 from sqlalchemy import create_engine
-from config import db_pass
 
 def get_db_data():
     # Connect to database
