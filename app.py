@@ -5,6 +5,14 @@ import requests
 import numpy as numpy
 import sklearn
 from sklearn.preprocessing import StandardScaler
+import sqlalchemy
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine, func, desc
+import sqlalchemy.dialects.sqlite
+import datetime as dt
+import pandas as pd
+import os
 
 app = Flask(__name__, 
             static_folder='static',
@@ -120,4 +128,5 @@ def explore():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
