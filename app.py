@@ -19,14 +19,12 @@ app = Flask(__name__,
             template_folder='templates')
 
 #load the ml model which we have saved earlier in .pkl format            
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('model1.pkl', 'rb'))
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
-#creating object for StandardScaler
-scaler = StandardScaler()
 
 
 #define the route for post request method 
@@ -52,48 +50,36 @@ def predict():
             Class_Code_Translated_Commercial = 0
             Class_Code_Translated_Exempt = 0 
             Class_Code_Translated_Industrial = 0 
-            Class_Code_Translated_Locally_Assessed = 0 
             Class_Code_Translated_Residential = 0 
         elif (Property_Class =='Commercial'):
             Class_Code_Translated_Agricultural = 0
             Class_Code_Translated_Commercial = 1
             Class_Code_Translated_Exempt = 0 
             Class_Code_Translated_Industrial = 0 
-            Class_Code_Translated_Locally_Assessed = 0 
             Class_Code_Translated_Residential = 0 
         elif (Property_Class == 'Exempt'):
             Class_Code_Translated_Agricultural = 0
             Class_Code_Translated_Commercial = 0
             Class_Code_Translated_Exempt = 1 
-            Class_Code_Translated_Industrial = 0 
-            Class_Code_Translated_Locally_Assessed = 0   
+            Class_Code_Translated_Industrial = 0  
             Class_Code_Translated_Residential = 0 
         elif (Property_Class == 'Industrial'):
             Class_Code_Translated_Agricultural = 0
             Class_Code_Translated_Commercial = 0
             Class_Code_Translated_Exempt = 0 
-            Class_Code_Translated_Industrial = 1 
-            Class_Code_Translated_Locally_Assessed = 0 
+            Class_Code_Translated_Industrial = 1  
             Class_Code_Translated_Residential = 0 
-        elif (Property_Class == 'Locally Assessed'):
-            Class_Code_Translated_Agricultural = 0
-            Class_Code_Translated_Commercial = 0
-            Class_Code_Translated_Exempt = 0 
-            Class_Code_Translated_Industrial = 0 
-            Class_Code_Translated_Locally_Assessed = 1  
-            Class_Code_Translated_Residential = 0
         elif (Property_Class == 'Residential'):
             Class_Code_Translated_Agricultural = 0
             Class_Code_Translated_Commercial = 0
             Class_Code_Translated_Exempt = 0 
             Class_Code_Translated_Industrial = 0 
-            Class_Code_Translated_Locally_Assessed = 0  
             Class_Code_Translated_Residential = 1
     # open file pickle.load x and y
-    new_data= [[Total_Assessed_Value, Parcel_Acreage, Parcel_Vacancy_Y, Parcel_Vacancy_N, Class_Code_Translated_Agricultural, Class_Code_Translated_Commercial, Class_Code_Translated_Exempt, Class_Code_Translated_Industrial, Class_Code_Translated_Locally_Assessed, Class_Code_Translated_Residential]]
+    new_data = [[Total_Assessed_Value, Parcel_Acreage, Parcel_Vacancy_N, Parcel_Vacancy_Y, Class_Code_Translated_Agricultural, Class_Code_Translated_Commercial, Class_Code_Translated_Exempt, Class_Code_Translated_Industrial, Class_Code_Translated_Residential]]
     # apply x scaler to xdata
-    Xscaler = pickle.load(open("Xscaler.pkl", "rb"))
-    Yscaler = pickle.load(open("Yscaler.pkl", "rb"))
+    Xscaler = pickle.load(open("Xscaler1.pkl", "rb"))
+    Yscaler = pickle.load(open("Yscaler1.pkl", "rb"))
 
     scaled = Xscaler.transform(new_data)
 
