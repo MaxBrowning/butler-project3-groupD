@@ -25,9 +25,6 @@ model = pickle.load(open('model.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
-#creating object for StandardScaler
-scaler = StandardScaler()
-
 
 #define the route for post request method 
 @app.route("/predict", methods=['POST'])
@@ -52,45 +49,33 @@ def predict():
             Class_Code_Translated_Commercial = 0
             Class_Code_Translated_Exempt = 0 
             Class_Code_Translated_Industrial = 0 
-            Class_Code_Translated_Locally_Assessed = 0 
             Class_Code_Translated_Residential = 0 
         elif (Property_Class =='Commercial'):
             Class_Code_Translated_Agricultural = 0
             Class_Code_Translated_Commercial = 1
             Class_Code_Translated_Exempt = 0 
             Class_Code_Translated_Industrial = 0 
-            Class_Code_Translated_Locally_Assessed = 0 
             Class_Code_Translated_Residential = 0 
         elif (Property_Class == 'Exempt'):
             Class_Code_Translated_Agricultural = 0
             Class_Code_Translated_Commercial = 0
             Class_Code_Translated_Exempt = 1 
-            Class_Code_Translated_Industrial = 0 
-            Class_Code_Translated_Locally_Assessed = 0   
+            Class_Code_Translated_Industrial = 0    
             Class_Code_Translated_Residential = 0 
         elif (Property_Class == 'Industrial'):
             Class_Code_Translated_Agricultural = 0
             Class_Code_Translated_Commercial = 0
             Class_Code_Translated_Exempt = 0 
-            Class_Code_Translated_Industrial = 1 
-            Class_Code_Translated_Locally_Assessed = 0 
+            Class_Code_Translated_Industrial = 1  
             Class_Code_Translated_Residential = 0 
-        elif (Property_Class == 'Locally Assessed'):
-            Class_Code_Translated_Agricultural = 0
-            Class_Code_Translated_Commercial = 0
-            Class_Code_Translated_Exempt = 0 
-            Class_Code_Translated_Industrial = 0 
-            Class_Code_Translated_Locally_Assessed = 1  
-            Class_Code_Translated_Residential = 0
         elif (Property_Class == 'Residential'):
             Class_Code_Translated_Agricultural = 0
             Class_Code_Translated_Commercial = 0
             Class_Code_Translated_Exempt = 0 
-            Class_Code_Translated_Industrial = 0 
-            Class_Code_Translated_Locally_Assessed = 0  
+            Class_Code_Translated_Industrial = 0  
             Class_Code_Translated_Residential = 1
     # open file pickle.load x and y
-    new_data= [[Total_Assessed_Value, Parcel_Acreage, Parcel_Vacancy_Y, Parcel_Vacancy_N, Class_Code_Translated_Agricultural, Class_Code_Translated_Commercial, Class_Code_Translated_Exempt, Class_Code_Translated_Industrial, Class_Code_Translated_Locally_Assessed, Class_Code_Translated_Residential]]
+    new_data= [[Total_Assessed_Value, Parcel_Acreage, Parcel_Vacancy_Y, Parcel_Vacancy_N, Class_Code_Translated_Agricultural, Class_Code_Translated_Commercial, Class_Code_Translated_Exempt, Class_Code_Translated_Industrial, Class_Code_Translated_Residential]]
     # apply x scaler to xdata
     Xscaler = pickle.load(open("Xscaler.pkl", "rb"))
     Yscaler = pickle.load(open("Yscaler.pkl", "rb"))
@@ -126,7 +111,12 @@ def database_data():
 def explore():
     return render_template('explore.html')
 
+    @app.route('/bio')
+    def bio():
+        return render_template('bio.html') 
+
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(debug=True)
+    #port = int(os.environ.get("PORT", 5000))
+    #app.run(host='0.0.0.0', port=port)
