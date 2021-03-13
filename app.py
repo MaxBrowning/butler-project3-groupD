@@ -111,9 +111,13 @@ def database_data():
 def explore():
     return render_template('explore.html')
 
-    @app.route('/bio')
-    def bio():
-        return render_template('bio.html') 
+@app.route('/bio')
+def bio():
+    return render_template('bio.html')
+
+@app.route('/resources')
+def resources():
+    return render_template('resources.html') 
 
 
 if __name__ == '__main__':
