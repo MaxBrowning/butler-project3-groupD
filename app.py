@@ -113,11 +113,7 @@ def explore():
 
 @app.route('/bio')
 def bio():
-    return render_template('bio.html')
-
-@app.route('/resources')
-def resources():
-    return render_template('resources.html') 
+    return render_template('bio.html') 
 
 
 if __name__ == '__main__':
