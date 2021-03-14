@@ -21,7 +21,7 @@ app = Flask(__name__,
 #load the ml model which we have saved earlier in .pkl format            
 model = pickle.load(open('model1.pkl', 'rb'))
 
-@app.route('/')
+@app.route('/index')
 def home():
     return render_template('index.html')
 
@@ -111,7 +111,7 @@ def database_data():
 def explore():
     return render_template('explore.html')
 
-@app.route('/bio')
+@app.route('/')
 def bio():
     return render_template('bio.html') 
 
