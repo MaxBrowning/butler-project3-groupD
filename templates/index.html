@@ -42,13 +42,7 @@
         border-radius: 10px;
         padding-top: 5%;
         font-weight: bolder;
-    }
-    div {
-     
-      border-radius: 5px;
-      margin-left: 35%;
-      width: 30%;
-      
+        margin: right 500px; ;
     }
     h1{
       text-align: center;
@@ -66,7 +60,6 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 text-align: center;
-                padding: 50px;
                 background: #eee !important;
             }
            
@@ -82,15 +75,15 @@
     <main class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <br>
+              <br>
                 <h1 class="section-title h1">Property Value Prediction</h1>
-                    <h4 style="text-align: center">Enter information to predict property value</h4>
-                    <p style="padding-bottom: 20px; border-bottom-width: 1px; border-top-color: black; border-top-style: solid"></p>
-                        </div>
+                  <h4 style="text-align: center">Enter information to predict property value</h4>
+                  <p style="padding-bottom: 20px; border-bottom-width: 1px; border-top-color: black; border-top-style: solid"></p>
+            </div>
 
-  <div>
+  <div class="col-md-12 text-center">
    <!-- Html form which will get all the values from user -->
-   <form action = "{{ url_for('predict')}}" method = "post" style="background-color:#f6f6f6; margin-top:10%">
+  <form action = "{{ url_for('predict')}}" method = "post" style="background-color:#f6f6f6;">
   <label for = "Assessed_Value">Total Assessed Value</label><br>
   <input type = "text" id = "Assessed_Value" name = "Assessed_Value" placeholder = "50,000" required = "required"><br>
   <label for="Acreage">Amount of Acreage</label><br>
@@ -114,15 +107,17 @@
   <!-- submit button -->           
   <input type = "submit" value="Calculate Selling Price">
   </form>
-  </div>
+
       
   <!-- the predicted text -->
   <h3>{{ prediction_text }}</h3>
+  </div>
 
 
 
-</body>
-<p class="card-text" p style="text-align: center">© 2021 | Design by Rebecca Joseph & Max Browning</p> <br>
-<p class="card-text" p style="text-align: center">***We do not gaurantee accuracy of property value predictions*** | </a><a href="https://www.stats.indiana.edu/topic/sdf.asp"> Visit the Indiana Stats Data Here</a> <br>
-    
+<br>
+<p class="card-text" p style="text-align: center">© 2021 | Design by Rebecca Joseph & Max Browning<br>
+***We do not gaurantee accuracy of property value predictions*** | </a><a href="https://www.stats.indiana.edu/topic/sdf.asp"> Visit the Indiana Stats Data Here</a> <br>
+ </p>
+</body>   
 </html>
