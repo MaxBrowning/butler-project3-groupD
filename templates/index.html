@@ -44,6 +44,7 @@
         padding-top: 5%;
         font-weight: bolder; 
         width: 80%;
+        margin-left: 55px;;
     }
     h1.section-title{
       text-align: center;
@@ -79,42 +80,43 @@
               <br>
                 <h1 class="section-title h1">Property Value Prediction</h1>
                   <h4 style="text-align: center">Enter information to predict property value</h4>
+                  <br>
                   <p style="padding-bottom: 20px; border-bottom-width: 1px; border-top-color: black; border-top-style: solid"></p>
             </div>
 
   <div class="col-md-6 text-center">
    <!-- Html form which will get all the values from user -->
-  <form action = "{{ url_for('predict')}}" method = "post" style="background-color:#f6f6f6;">
-  <label for = "Assessed_Value">Total Assessed Value</label><br>
-  <input type = "text" id = "Assessed_Value" name = "Assessed_Value" placeholder = "50,000" required = "required"><br>
-  <label for="Acreage">Amount of Acreage</label><br>
-  <input type="text" id = "Acreage" name = "Acreage" placeholder = "1" required = "required"><br>
+    <form action = "{{ url_for('predict')}}" method = "post" style="background-color:#f6f6f6;">
+      <label for = "Assessed_Value">Total Assessed Value</label><br>
+        <input type = "text" id = "Assessed_Value" name = "Assessed_Value" placeholder = "50,000" required = "required"><br>
+          <label for="Acreage">Amount of Acreage</label><br>
+            <input type="text" id = "Acreage" name = "Acreage" placeholder = "1" required = "required"><br>
 <!-- drop down options are provided for the categorical features -->
-  <label for = "Property_Class">Type of Property</label><br>
-  <select id = "Property_Class" name = "Property_Class">
-        <option value = "Agricultural">Agricultural</option>
-        <option value = "Commercial">Commercial</option>
-        <option value = "Exempt">Exempt</option>
-        <option value = "Industrial">Industrial</option>
-        <option value = "Residential">Residential</option>
-      </select><br>
-  
-  <label for = "Vacant">Vacant</label><br>
-  <select id = "vacant" name="Vacant">
-        <option value = "Yes">Yes</option>
-        <option value = "No">No</option>
-      </select><br>
- <br>
+               <label for = "Property_Class">Type of Property</label><br>
+                  <select id = "Property_Class" name = "Property_Class">
+                    <option value = "Agricultural">Agricultural</option>
+                      <option value = "Commercial">Commercial</option>
+                    <option value = "Exempt">Exempt</option>
+                  <option value = "Industrial">Industrial</option>
+                <option value = "Residential">Residential</option>
+              </select>
+            <br>
+          <label for = "Vacant">Vacant</label><br>
+        <select id = "vacant" name="Vacant">
+          <option value = "Yes">Yes</option>
+          <option value = "No">No</option>
+        </select><br>
+        <br>
   <!-- submit button -->           
-  <input type = "submit" value="Calculate Selling Price">
-  </form>
-</div>
+      <input type = "submit" value="Calculate Selling Price">
+    </form>
+  </div>
   <div class="col-md-6 text-center">
     <form style="background-color:#f6f6f6;">
-      <h1 style = "text-align: Center;"> Glossary</h1><br>
+      <h1 class="section-title h1;"> Glossary</h1>
       <h4 style = "text-align: Center;"> Assessed Value: The dollar value assigned to a property to measure applicable taxes.</h4><br>
-      <h4 style = "text-align: Center;"> Acreage: area size of property.</h4><br>
-      <h4 style = "text-align: Center;"> Property Type: Various types of property usage.</h4><br>
+      <h4 style = "text-align: Center;"> Acreage: The area size of property.</h4><br>
+      <h4 style = "text-align: Center;"> Property Type: The types of property usage.</h4><br>
       <h4 style = "text-align: Center;"> Vacancy: A property that is undeveloped and doesnt contain buildings.</h4>
         <br>
         <br>
@@ -124,11 +126,12 @@
   <!-- the predicted text -->
   <div class = "col-md-12 text-center">
     <br>
-  <h3>{{ prediction_text }}</h3>
+      <h3>{{ prediction_text }}</h3>
   </div>
   <br>
-<p class="col-md-12 text-center">© 2021 | Design by Rebecca Joseph & Max Browning<br><br>
-***We do not gaurantee accuracy of property value predictions*** | </a><a href="https://www.stats.indiana.edu/topic/sdf.asp"> Visit the Indiana Stats Data Here</a> <br>
- </p>
+  <br>
+    <p class="col-md-12 text-center">© 2021 | Design by Rebecca Joseph & Max Browning<br><br>
+    ***We do not gaurantee accuracy of property value predictions*** | </a><a href="https://www.stats.indiana.edu/topic/sdf.asp"> Visit the Indiana Stats Data Here</a> <br>
+    </p>
 </body>   
 </html>
