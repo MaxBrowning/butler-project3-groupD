@@ -94,7 +94,7 @@ def predict():
 
 
     if output:           #condition for invalid values
-        return render_template('index.html', prediction_text = 'Assessed_Value' "This property is worth ${:,.2f}".format(output))
+        return render_template('index.html', prediction_text ="This property is worth ${:,.2f}".format(output))
         
     #html form to be displayed on screen when no values are inserted; without any output or prediction
     else:
@@ -114,6 +114,12 @@ def explore():
 @app.route('/')
 def bio():
     return render_template('bio.html') 
+
+@app.route('/comps')
+def comps():
+    return render_template('comps.html') 
+
+
 
 
 if __name__ == '__main__':
