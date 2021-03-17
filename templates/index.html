@@ -89,10 +89,10 @@
     <form action = "{{ url_for('predict')}}" method = "post" style="background-color:#f6f6f6;">
       <label for = "Assessed_Value">Total Assessed Value</label><br>
         <input type = "text" id = "Assessed_Value" name = "Assessed_Value" placeholder = "50,000" required = "required"><br>
-          <label for="Acreage">Amount of Acreage</label><br>
+          <label for="Acreage">Acreage Size</label><br>
             <input type="text" id = "Acreage" name = "Acreage" placeholder = "1" required = "required"><br>
 <!-- drop down options are provided for the categorical features -->
-               <label for = "Property_Class">Type of Property</label><br>
+               <label for = "Property_Class">Property Type</label><br>
                   <select id = "Property_Class" name = "Property_Class">
                     <option value = "Agricultural">Agricultural</option>
                       <option value = "Commercial">Commercial</option>
@@ -101,7 +101,7 @@
                 <option value = "Residential">Residential</option>
               </select>
             <br>
-          <label for = "Vacant">Vacant</label><br>
+          <label for = "Vacant">Vacancy Status</label><br>
         <select id = "vacant" name="Vacant">
           <option value = "Yes">Yes</option>
           <option value = "No">No</option>
@@ -113,11 +113,12 @@
   </div>
   <div class="col-md-6 text-center">
     <form style="background-color:#f6f6f6;">
-      <h1 class="section-title h1;"> Glossary</h1>
-        <h4 style = "text-align: Center;"> Assessed Value: The dollar value assigned to a property to measure applicable taxes.</h4><br>
-          <h4 style = "text-align: Center;"> Acreage: The size of the piece of land.</h4><br>
-            <h4 style = "text-align: Center;"> Property Type: The types of property usage.</h4><br>
-          <h4 style = "text-align: Center;"> Vacancy: The status of a properties development and if it contain buildings.</h4>
+      <h1 class="section-title h1;"> </h1>
+      <p><img src="https://raw.githubusercontent.com/Cosette3737/Project3Deploy/main/images/plot.png" alt="card image"></p>
+        <!--h4 style = "text-align: Left;"> Assessed Value: The value assigned to a property to measure applicable taxes.</h4><br>
+          <h4 style = "text-align: Left;"> Acreage: The size of the plot of land.</h4><br>
+            <h4 style = "text-align: Left;"> Property Type: The type of property.</h4><br>
+          <h4 style = "text-align: Left;"> Vacancy: The status of a properties development and if it contain buildings.</h4-->
         <br>
       <br>
     </form>
