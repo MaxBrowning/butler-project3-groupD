@@ -100,12 +100,13 @@ def predict():
     else:
         return render_template('index.html')
 
-@app.route('/property', methods=['GET'])
-def database_data():
-    propertydata = data.get_db_data()
-    response = jsonify(propertydata)
-    response.headers.add('Access-Control-Allow-Origin','*')
-    return response
+### Pulls data from data.py [unused document]
+# @app.route('/property', methods=['GET'])
+# def database_data():
+#     propertydata = data.get_db_data()
+#     response = jsonify(propertydata)
+#     response.headers.add('Access-Control-Allow-Origin','*')
+#     return response
 
 @app.route('/explore')
 def explore():
