@@ -100,13 +100,12 @@ def predict():
     else:
         return render_template('index.html')
 
-### Pulls data from data.py [unused document]
-# @app.route('/property', methods=['GET'])
-# def database_data():
-#     propertydata = data.get_db_data()
-#     response = jsonify(propertydata)
-#     response.headers.add('Access-Control-Allow-Origin','*')
-#     return response
+@app.route('/property', methods=['GET'])
+def database_data():
+    propertydata = data.get_db_data()
+    response = jsonify(propertydata)
+    response.headers.add('Access-Control-Allow-Origin','*')
+    return response
 
 @app.route('/explore')
 def explore():
@@ -125,5 +124,5 @@ def comps():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    port = int(os.environ.get("port", PORT))
+    port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
