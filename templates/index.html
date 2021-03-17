@@ -86,7 +86,7 @@
 
   <div class="col-md-6 text-center">
    <!-- Html form which will get all the values from user -->
-    <form action = "{{ url_for('predict')}}" method = "post" style="background-color:#f6f6f6;">
+    <form action = "{{ url_for('predict')}}" method = "post" style="background-color:#d8e7ec;">
       <label for = "Assessed_Value">Total Assessed Value</label><br>
         <input type = "text" id = "Assessed_Value" name = "Assessed_Value" placeholder = "50,000" required = "required"><br>
           <label for="Acreage">Acreage Size</label><br>
@@ -109,17 +109,16 @@
         <br>
   <!-- submit button -->           
       <input type = "submit" value="Calculate Selling Price">
+      <br><br>
     </form>
   </div>
   <div class="col-md-6 text-center">
-    <form style="background-color:#f6f6f6;">
-      <h1 class="section-title h1;"> </h1>
-      <p><img src="https://raw.githubusercontent.com/Cosette3737/Project3Deploy/main/images/plot.png" alt="card image"></p>
-        <!--h4 style = "text-align: Left;"> Assessed Value: The value assigned to a property to measure applicable taxes.</h4><br>
-          <h4 style = "text-align: Left;"> Acreage: The size of the plot of land.</h4><br>
-            <h4 style = "text-align: Left;"> Property Type: The type of property.</h4><br>
-          <h4 style = "text-align: Left;"> Vacancy: The status of a properties development and if it contain buildings.</h4-->
-        <br>
+    <form style="background-color:#d8e7ec">
+        <h3 style = "text-align: Center;"> Assessed Value: The value <br>assigned to a property<br> to measure applicable taxes.</h3><br>
+          <h3 style = "text-align: Center;"> Acreage: The size of the <br>plot of land.<h3><br>
+            <h3 style = "text-align: Center;"> Property Type: The<br> type of property.</h3><br>
+          <h3 style = "text-align: Center;"> Vacancy: The status<br> of development and if <br>it contain buildings.</h3>
+          <br>
       <br>
     </form>
   </div>
