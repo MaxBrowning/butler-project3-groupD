@@ -4,6 +4,8 @@
 
 ![Image of Project Home Page](https://raw.githubusercontent.com/Cosette3737/RebeccaJoseph/main/assets/img/propertypredict.JPG)
 
+
+[Visit this project Here](https://property-sales-predictor-in20.herokuapp.com/)
 ### Collaborators:
 * [Max Browning](https://github.com/MaxBrowning)
 * [Becky Joseph](https://github.com/Cosette3737)
