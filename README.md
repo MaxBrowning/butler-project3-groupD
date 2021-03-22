@@ -1,8 +1,5 @@
 # <p align ="center">Property Value Prediction With Machine Learning </p>
 
-# <p align ="center">[Visit the deployed project Here](https://property-sales-predictor-in20.herokuapp.com/)</p>
-
-
 ![Image of Project Home Page](https://raw.githubusercontent.com/Cosette3737/RebeccaJoseph/main/assets/img/propertypredict.JPG)
 
 
@@ -14,6 +11,9 @@
 
 ### Project Overview:
 Using collected data from Indiana Property Sales in 2020, machine learning was used to create a model that would allow property value prediction based on certain parameters such as assessed value, plot size and class of property.  This information was collected via user input and calculated what the estimated price would be.  Along side of the prediction tool is a dashboard that allows the user to interact and explore the collected data. Additionaly, a comparison dashboard allows the user to select actual properties by certain filters and see the actual price of property sales from Indiana 2020 sales. 
+
+# <p align ="center">[Visit the deployed project Here](https://property-sales-predictor-in20.herokuapp.com/)</p>
+
 
 ### Dataset:
 [Indiana 2020 Property Sales Disclosure Form Data](https://www.stats.indiana.edu/topic/sdf.asp)
