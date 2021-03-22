@@ -1,6 +1,6 @@
 # <p align ="center">Property Value Prediction With Machine Learning </p>
 
-[Visit the deployed project Here](https://property-sales-predictor-in20.herokuapp.com/)
+# <p align ="center">[Visit the deployed project Here](https://property-sales-predictor-in20.herokuapp.com/)</p>
 
 
 ![Image of Project Home Page](https://raw.githubusercontent.com/Cosette3737/RebeccaJoseph/main/assets/img/propertypredict.JPG)
